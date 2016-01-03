@@ -1,0 +1,68 @@
+<div id="podcast_show">
+	<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @podcast.title %></h1>
+			<p class="description"><%= @podcast.description %></p>
+			<% unless @podcast.itunes.blank? %>
+				<%= link_to "iTunes", @podcast.itunes, class: "subscribe_link" %>
+			<% end %>
+			<% unless @podcast.soundcloud.blank? %>
+				<%= link_to "SoundCloud", @podcast.soundcloud, class: "subscribe_link" %>
+			<% end %>
+			<% unless @podcast.youtube.blank? %>
+				<%= link_to "YouTube", @podcast.youtube, class: "subscribe_link" %>
+			<% end %>
+		</div>
+	</div>
+
+	<div id="breadcrumb">
+		<%= link_to podcasts_path do %>
+			Todos os podcasts
+			<span>/</span>
+			<%= @podcast.title %>
+		<% end %>
+	</div>
+
+	<div id="episodes">
+		<div class="wrapper_skinny">
+			<ul class="cf">
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/filipe.jpg" alt="Filipe">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html"> #46 Como melhorar sua produtividade</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</li>
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/filipe.jpg" alt="Filipe">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html"> #46 Como melhorar sua produtividade</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</li>
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/filipe.jpg" alt="Filipe">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html"> #46 Como melhorar sua produtividade</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
