@@ -110,7 +110,7 @@ body {
 }
 
 .podcasts_banner {
-	background-image: url('../images/banner.jpg');
+	background-image: image-url('banner.jpg');
 }
 
 .pagination:before, .pagination:after {
@@ -178,4 +178,4 @@ textarea {
 
 @import 'normalize';
 @import 'welcome';
-/*@import 'podcasts';*/
+@import 'podcasts';
