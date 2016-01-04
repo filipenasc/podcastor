@@ -16,11 +16,21 @@
 	</div>
 
 	<div id="breadcrumb">
-		<%= link_to podcasts_path do %>
+		<a href="#">
 			Todos os podcasts
 			<span>/</span>
-			<%= @podcast.title %>
-		<% end %>
+			<%= link_to @podcast.title, podcast_path(@podcast) %>
+			<span>/</span>
+			<%= @episode.title %>
+		</a>
+	</div>
+
+	<div id="episode_content">
+		<div class="wrapper_skinny">
+			<img src="images/filipe.jpg" class="current_episode_thumbnail">
+			<h2><%= @episode.title %></h2>
+			<p class="description"><%= @episode.description %></p>
+		</div>
 	</div>
 
 	<div id="episodes">
@@ -35,7 +45,7 @@
 						</div>
 						<div class="episode_overview">
 							<h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
-							<p class="description"><%= episode.description %></p>
+							<p class="description"><%= truncate(episode.description, length: 160) %></p>
 						</div>
 					</li>
 				<% end %>
