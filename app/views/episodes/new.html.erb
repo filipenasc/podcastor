@@ -1,15 +1,38 @@
-<h1>New episode</h1>
+<div id="podcast_show">
+  <div id="show_banner">
+    <div class="wrapper_skinny">
+      <h1>The Rocketship Podcast Dashboard</h1>
+    </div>
+  </div>
 
-<%= form_for ([@podcast, @episode]) do |f| %>
-	<%= f.label :title %> <br>
-	<%= f.text_field :title %>
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to "Episodes", root_path %></li>
+        <li><%= link_to "Novo podcast", new_podcast_episode_path(@podcast), class: "current" %></li>
+        <li><%= link_to "Account Settings", edit_podcast_registration_path %></li>
+        <li><%= link_to "View podcast", podcast_path(current_podcast) %></li>
+      </ul>
+    </div>
+  </div>
 
-	<br><br>
+	<div id="form">
+	  <div class="wrapper_skinny">
+			<h1>New episode</h1>
 
-	<%= f.label :description %> <br>
-	<%= f.text_area :description %>	
+			<%= form_for ([@podcast, @episode]) do |f| %>
+				<%= f.label :title %> <br>
+				<%= f.text_field :title %>
 
-	<br><br>
+				<br><br>
 
-	<%= f.submit %>
-<% end %>
+				<%= f.label :description %> <br>
+				<%= f.text_area :description %>	
+
+				<br><br>
+
+				<%= f.submit %>
+			<% end %>
+			</div>
+	</div>
+</div>
