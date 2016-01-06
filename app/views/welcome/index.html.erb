@@ -4,15 +4,9 @@
 			<a id="logo" href="#">Podcastor</a>
 			<nav>
 				<ul>
-					<% unless podcast_signed_in? %>
-						<li><%= link_to "Explorar", podcasts_path %></li>
-						<li><%= link_to "Entrar", new_podcast_session_path %></li>
-						<li><%= link_to "Criar um podcast", new_podcast_registration_path %></li>
-					<% else %>
-						<li><a href="#">Dashboard</a></li>
-						<li><%= link_to "Explorar", podcasts_path %></li>
-						<li><%= link_to "Sair", destroy_podcast_session_path, method: :delete %></li>
-					<% end %>
+					<li><%= link_to "Explorar", podcasts_path %></li>
+					<li><%= link_to "Entrar", new_podcast_session_path %></li>
+					<li><%= link_to "Criar um podcast", new_podcast_registration_path %></li>
 				</ul>
 			</nav>
 		</div>
